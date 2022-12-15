@@ -1,0 +1,11 @@
+wordpress:
+  image: wordpress
+  links:
+    - mysql:mysql
+  ports:
+    - 8086:80
+
+mysql:
+  image: mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=password 
